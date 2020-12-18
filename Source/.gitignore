@@ -1,0 +1,15 @@
+/.vs
+/Common/*.aps
+/Registry*/.vs
+/Registry*/*.user
+/Registry*/bin/Debug
+/Registry*/obj
+/Registry*/bin/Release/*/*.exp
+/Registry*/bin/Release/*/*.iobj
+/Registry*/bin/Release/*/*.ipdb
+/Registry*/bin/Release/*/*.lib
+/Registry*/bin/Release/*/*.pdb
+/Registry*/bin/Release/*/*.metagen
+/Registry*.Tests/bin
+/Registry*.Tests/Properties/launchSettings.json
+/Registry.Java/**/*.class
