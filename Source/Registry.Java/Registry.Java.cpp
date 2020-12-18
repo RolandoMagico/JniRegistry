@@ -25,7 +25,7 @@
 /***********************************************************************************************************************
  INCLUDES
 ***********************************************************************************************************************/
-#include "rolandomagico_registry_Registry.h"
+#include "rolandomagico_jniregistry_Registry.h"
 #include <windows.h>
 
 /***********************************************************************************************************************
@@ -65,7 +65,7 @@ LSTATUS ReadRegistry(JNIEnv* env, jint hKey, jstring location, jstring key, PVOI
   return status;
 }
 
-JNIEXPORT jlong JNICALL Java_rolandomagico_registry_Registry_readLongValue(JNIEnv* env, jobject, jint hKey, jstring location, jstring key, jlong defaultValue)
+JNIEXPORT jlong JNICALL Java_rolandomagico_jniregistry_Registry_readLongValue(JNIEnv* env, jobject, jint hKey, jstring location, jstring key, jlong defaultValue)
 {
 	long buffer;
 	DWORD bufferLength = sizeof(buffer);
@@ -80,7 +80,7 @@ JNIEXPORT jlong JNICALL Java_rolandomagico_registry_Registry_readLongValue(JNIEn
   }
 }
 
-JNIEXPORT jstring JNICALL Java_rolandomagico_registry_Registry_readStringValue(JNIEnv* env, jobject, jint hKey, jstring location, jstring key, jstring defaultValue)
+JNIEXPORT jstring JNICALL Java_rolandomagico_jniregistry_Registry_readStringValue(JNIEnv* env, jobject, jint hKey, jstring location, jstring key, jstring defaultValue)
 {
 	char buffer[1024];
 	DWORD bufferLength = sizeof(buffer);
@@ -95,7 +95,7 @@ JNIEXPORT jstring JNICALL Java_rolandomagico_registry_Registry_readStringValue(J
 	}
 }
 
-JNIEXPORT void JNICALL Java_rolandomagico_registry_Registry_writeStringValue(JNIEnv* env, jobject, jint hKey, jstring location, jstring key, jstring value)
+JNIEXPORT void JNICALL Java_rolandomagico_jniregistry_Registry_writeStringValue(JNIEnv* env, jobject, jint hKey, jstring location, jstring key, jstring value)
 {
   const char* nativeKey = env->GetStringUTFChars(key, FALSE);
   const char* nativeLocation = env->GetStringUTFChars(location, FALSE);

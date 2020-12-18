@@ -22,7 +22,7 @@
  SOFTWARE.
 ***********************************************************************************************************************/
 
-package rolandomagico.registry;
+package rolandomagico.jniregistry;
 
 import java.util.HashMap;
 import java.util.Map;
