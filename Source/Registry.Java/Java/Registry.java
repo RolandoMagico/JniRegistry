@@ -36,7 +36,7 @@ public final class Registry
   static
   {
     final String archDataModel = System.getProperty("sun.arch.data.model");
-    System.loadLibrary("libraries/Registry.Java" + archDataModel);
+    System.loadLibrary("libraries/Registry.Java." + archDataModel);
   }
 
   private static final int HKEY_CLASSES_ROOT = 0x80000000;
